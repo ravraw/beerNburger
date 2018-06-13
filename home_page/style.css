@@ -1,0 +1,18 @@
+.navigation-list {
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navigation-item {
+  display: inline-block;
+
+  border: 1px solid gray;
+  padding: 5px 50px;
+}
+
+.navigation-link {
+  text-decoration: none;
+}
