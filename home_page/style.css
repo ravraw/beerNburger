@@ -1,18 +1,53 @@
 .navigation-list {
   list-style: none;
-
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background: #333;
 }
 .navigation-item {
   display: inline-block;
-
-  border: 1px solid gray;
-  padding: 5px 50px;
 }
 
 .navigation-link {
+  position: relative;
+  display: block;
   text-decoration: none;
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border-radius: 50%;
+}
+.navigation-link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+.navigation-link:hover:before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+.navigation-link:hover {
+  fill: #ffee10;
+  box-shadow: 0 0 15px #ffee10;
+  text-shadow: 0 0 15px #ffee10;
+}
+
+.icon {
+  width: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
