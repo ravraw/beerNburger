@@ -1,3 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-image: url("image/lrt.jpg");
+  background-size: cover;
+}
+
+.menu {
+  height: 95vh;
+  border: 1px solid black;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-left {
+  width: 20vw;
+  border: 1px solid black;
+}
+
+.menu-right {
+  width: 90vw;
+  border: 1px solid black;
+  margin-top: 100px;
+  padding: 0;
+  align-items: center;
+  overflow: scroll;
+}
+.menu-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Item cards  styles */
+
+.menu-item {
+  max-width: 300px;
+  height: auto;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 5px 5px 15px 3px #888888;
+  border-radius: 5px;
+  background: rgba(231, 192, 18, 0.7);
+}
+
+.item-image {
+  width: 100%;
+  height: 50%;
+}
+.item-name {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: -5px;
+}
+.item-description {
+  font-size: 1.1em;
+  width: 100%;
+  color: white;
+}
+.item-add {
+  font-size: 1.5em;
+  color: red;
+  margin-top: 5px;
+  background: #f5f106;
+  border-radius: 9px;
+  height: 2em;
+}
+
+/* Header styles */
+.navigation {
+  background: rgba(0, 0, 0, 0.3);
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
 .navigation-list {
   list-style: none;
   margin: 0;
@@ -6,18 +95,24 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: #333;
 }
 .navigation-item {
   display: inline-block;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.navigation-name {
+  color: white;
+  margin-top: 5px;
 }
 
 .navigation-link {
   position: relative;
   display: block;
   text-decoration: none;
-  width: 100px;
-  height: 100px;
+  width: 5em;
+  height: 5em;
   background: #333;
   border-radius: 50%;
 }
@@ -26,8 +121,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+
   border-radius: 50%;
   background: #ffee10;
   transition: 0.5s;
@@ -46,8 +140,14 @@
 
 .icon {
   width: 70%;
+  padding: 20px;
+
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+footer {
+  background: green;
 }
