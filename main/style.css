@@ -7,20 +7,21 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background: gray;
+  /* background: gray; */
   border: 1px solid red;
   display: flex;
   flex-flow: column;
 }
 
 .container > * > * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* -------------Header -------------- */
 
 .header {
   height: 10%;
+  background: gray;
 }
 
 /* ---------------main----------------- */
@@ -31,31 +32,56 @@
 }
 /* -------------LEFT ---------- */
 .main-left {
-  width: 15%;
+  width: 10%;
+  min-width: 90px;
+  overflow: scroll;
+}
+.nav {
   height: 100%;
-  background: black;
 }
 
-.nav-list {
+.nav__list {
   height: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.nav-item {
+.nav__item {
   list-style: none;
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 10px;
-  color: gray;
+  color: black;
   text-align: center;
   cursor: pointer;
+  flex-shrink: 1;
+  /* border: 1px solid red; */
 }
-.nav-item:hover {
+.nav__item:hover {
   color: white;
+}
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.nav__name {
+  color: black;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  /* border: 1px solid red; */
+  margin-top: 10px;
+}
+.nav__icon {
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid red; */
 }
 
 /* -------RIGHT---- */
 .main-right {
-  width: 85%;
+  width: 90%;
+  min-width: 240px;
   overflow: scroll;
   background: white;
 }
@@ -67,8 +93,9 @@
   grid-template-columns: repeat(auto-fit, minmax(min-content, 200px));
 
   grid-auto-rows: minmax(min-content, 300px);
-
-  grid-gap: 40px;
+  justify-content: space-around;
+  align-content: center;
+  grid-gap: 20px;
 }
 .menu-item {
   display: flex;
@@ -76,6 +103,7 @@
   /* border: 1px solid red; */
   list-style: none;
   background: white;
+  flex-grow: 1;
 }
 
 .menu-item__image {
@@ -109,4 +137,5 @@
 
 .footer {
   height: 5%;
+  text-align: center;
 }
