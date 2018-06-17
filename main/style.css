@@ -1,4 +1,4 @@
-.body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,48 +29,80 @@
   height: 85%;
   display: flex;
 }
-
+/* -------------LEFT ---------- */
 .main-left {
   width: 15%;
-}
-.navigation {
   height: 100%;
-}
-.nav-list {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.nav-item {
-  margin: 10px;
-  height: 10%;
-  border: 1px solid red;
-  list-style: none;
+  background: black;
 }
 
-/* ---------------- */
+.nav-list {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+.nav-item {
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+  color: gray;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-item:hover {
+  color: white;
+}
+
+/* -------RIGHT---- */
 .main-right {
   width: 85%;
   overflow: scroll;
+  background: white;
 }
 .menu-list {
   margin: 1.5em;
   padding: 0;
   display: grid;
-  grid-template-rows: repeat(3, 250px);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, minmax(min-content, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 200px));
 
-  grid-auto-rows: 200px;
+  grid-auto-rows: minmax(min-content, 300px);
 
-  grid-gap: 10px;
+  grid-gap: 40px;
 }
-.item {
-  border: 1px solid red;
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
   list-style: none;
   background: white;
+}
+
+.menu-item__image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.menu-item__name {
+  margin: 10px 0;
+  padding: 0;
+}
+.menu-item__description {
+  margin: 0;
+  padding: 0;
+}
+.menu-item__button {
+  width: 100%;
+  background: green;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 1em;
+}
+.menu-item__button:hover {
+  color: red;
+  cursor: pointer;
 }
 
 /* ---------------footer----------------- */
