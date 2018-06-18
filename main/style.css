@@ -13,21 +13,81 @@
   flex-flow: column;
 }
 
-.container > * > * {
-  /* border: 1px solid red; */
-}
-
 /* -------------Header -------------- */
 
 .header {
-  height: 10%;
-  background: gray;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.header-left {
+  width: 10%;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.header-left:hover {
+  fill: red;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-right {
+  width: 90%;
+  display: flex;
+  /* border: 1px solid red; */
+  align-items: center;
+}
+.head-logo {
+  width: 80%;
+  /* border: red 1px solid; */
+  text-align: center;
+}
+.head-logo img {
+  width: 275px;
+}
+.head-nav {
+  width: 20%;
+}
+
+.head-nav__list {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid red; */
+  justify-content: flex-end;
+  align-items: center;
+}
+.head-nav__item {
+  list-style: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Architects Daughter", cursive;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  cursor: pointer;
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.head-nav__item:hover {
+  color: red;
 }
 
 /* ---------------main----------------- */
 
 .main {
-  height: 85%;
+  height: 80%;
   display: flex;
 }
 /* -------------LEFT ---------- */
@@ -50,28 +110,32 @@
   list-style: none;
   margin: 5px 0;
   padding: 10px;
-  color: black;
   text-align: center;
   cursor: pointer;
-  flex-shrink: 1;
+  flex: 1;
   /* border: 1px solid red; */
 }
-.nav__item:hover {
-  color: white;
-}
+
 .nav__link {
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
 }
+.nav__link:hover {
+  color: red;
+  fill: red;
+}
 .nav__name {
-  color: black;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Architects Daughter", cursive;
   text-transform: uppercase;
   /* border: 1px solid red; */
   margin-top: 10px;
 }
+
 .nav__icon {
   width: 50px;
   height: 50px;
@@ -83,10 +147,10 @@
   width: 90%;
   min-width: 240px;
   overflow: scroll;
-  background: white;
+  background: rgba(250, 249, 249, 0.7);
 }
 .menu-list {
-  margin: 1.5em;
+  margin: 1.7em;
   padding: 0;
   display: grid;
   grid-template-rows: repeat(3, minmax(min-content, 300px));
@@ -103,7 +167,7 @@
   /* border: 1px solid red; */
   list-style: none;
   background: white;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .menu-item__image {
@@ -121,15 +185,17 @@
 }
 .menu-item__button {
   width: 100%;
-  background: green;
+  background: #ff6347;
   border: 1px solid black;
   border-radius: 10px;
   margin: 5px 0;
   padding: 5px;
   font-size: 1em;
+  text-transform: uppercase;
 }
 .menu-item__button:hover {
-  color: red;
+  color: white;
+  background: rgba(238, 130, 7, 0.9);
   cursor: pointer;
 }
 
@@ -137,5 +203,8 @@
 
 .footer {
   height: 5%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Architects Daughter", cursive;
 }
